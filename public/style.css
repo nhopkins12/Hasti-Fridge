@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "My Custom Font";
+  src: url(pc-2000.ttf) format("truetype");
+}
+body {background-color:#798f31;font-size:16px; line-height:1.9; font-family:serif;}
+.container {width:75%;margin:2em auto;}
+/* p {cursor:move;margin-bottom:24px} */
+span {position:absolute; cursor:grab; line-height:1;display:absolute;margin:0 4px 8px 0; background-color:#efefef;padding:.4em;
+  -webkit-box-shadow:3px 3px 0px 0px rgba(50, 50, 50, 1);
+  -moz-box-shadow:3px 3px 0px 0px rgba(50, 50, 50, 1);
+  box-shadow:3px 3px 0px 0px rgba(50, 50, 50, 1);
+}
+
+/* span::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 1); 
+  z-index: -1;
+  transform-origin: top left;
+  transform: translate(3px, 3px);
+} */
+
+#ctxMenu{
+  display:none;
+  z-index:100;
+  position:absolute;
+}
+
+#delMenu{
+  display:none;
+  z-index:100;
+  position:absolute;
+}
+
+button:hover {
+  background-color:#eef;
+}
