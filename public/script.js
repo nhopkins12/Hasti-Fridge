@@ -155,7 +155,6 @@ function dragElement(elmnt) {
                 }
                 e.target.style.transform = 'rotate('+ (curr - 5) +'deg)'
             }
-            update()
         }
 
         document.addEventListener("keypress", check, false);
