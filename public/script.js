@@ -117,7 +117,6 @@ document.addEventListener("click",function(event){
         var ctxMenu = document.getElementById("delMenu");
         ctxMenu.remove()
     }
-    update()
 },false);
 
 
@@ -135,7 +134,6 @@ function dragElement(elmnt) {
         document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
-        update()
         check = function (evv) {
             if (evv.code == "KeyD"){
                 curr = e.target.style.transform.substring(7, e.target.style.transform.length-4)
@@ -178,6 +176,7 @@ function dragElement(elmnt) {
 
     function closeDragElement(e) {
         document.removeEventListener("keypress", check, false);
+        update()
         // stop moving when mouse button is released:
         document.onmouseup = null;
         document.onmousemove = null;
@@ -185,6 +184,7 @@ function dragElement(elmnt) {
 }
 
 document.onkeypress = function(evt) {
+    
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     if (charCode == 13) {
@@ -229,6 +229,7 @@ document.onkeypress = function(evt) {
             document.body.appendChild(ctxMenu)
             ctxMenu.addEventListener("click", function(e) {
                 event.target.remove()
+                update()
             });
         },false);
         span.addEventListener("dblclick", function(event){
@@ -236,6 +237,7 @@ document.onkeypress = function(evt) {
             event.target.focus()
         },false); 
     }
+    update()
 };
 
 function update(){
